@@ -1,6 +1,4 @@
 # Contrast-YOLO
-# Contrast-YOLO
-
 **Dual-Box Contrastive Learning for Fine-Grained Power Tower Detection in Remote Sensing Imagery**
 
 **面向遥感图像输电塔细粒度检测的双框对比学习方法**
