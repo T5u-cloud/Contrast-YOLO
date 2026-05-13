@@ -1,0 +1,57 @@
+# ===========================================================================
+# Tower Detection Dataset Config
+# 输电塔检测数据集配置
+#
+# This file is the dataset configuration used during training.
+# Images are not included in this public repository due to copyright
+# (sourced from Google Earth, for academic use only). See samples/ for
+# the label format.
+#
+# 本文件是训练时使用的数据集配置。
+# 图像数据未上传至本公开仓库（采自 Google Earth，仅用于学术研究，受版权限制）。
+# 标注格式示例见 samples/ 目录。
+# ===========================================================================
+
+# Dataset root / 数据集根目录
+# Replace with your local path when reproducing.
+# 复现时替换为你的本地路径。
+path: ./data/tower_dataset
+
+# Image lists / 图像列表（相对 path）
+train: train.txt
+val:   val.txt
+test:  test.txt
+
+# Number of classes / 类别数
+# 6 tower types × 2 box types (Overall / Body) = 12 classes
+# 6 种塔型 × 2 种框（Overall / Body）= 12 类
+nc: 12
+
+# Class names (order must match class_id in label files)
+# 类别名（顺序必须与标注文件中的 class id 严格对应）
+#
+# Encoding convention / 编码规则:
+#   class_id = physical_type_id * 2 + box_type
+#   - physical_type_id ∈ {0..5}: Umbrella / Wineglass / T / V / Gate / Other
+#   - box_type: 0 = Overall (tower body + shadow)
+#               1 = Body    (tower body only)
+#   - Even ids are Overall, odd ids are Body, paired by consecutive index.
+#
+#   class_id = 物理塔型 ID × 2 + 框类型
+#   - 物理塔型 ID ∈ {0..5}：伞型 / 酒杯型 / T 型 / V 型 / 门型 / 其他
+#   - 框类型：0 = Overall（塔身 + 阴影的整体框）
+#            1 = Body   （仅塔身的小框）
+#   - 偶数 id 为 Overall，奇数 id 为 Body，相邻成对。
+names:
+  - Umbrella_Overall   #  0
+  - Umbrella_Body      #  1
+  - Wineglass_Overall  #  2
+  - Wineglass_Body     #  3
+  - T_Overall          #  4
+  - T_Body             #  5
+  - V_Overall          #  6
+  - V_Body             #  7
+  - Gate_Overall       #  8
+  - Gate_Body          #  9
+  - Other_Overall      # 10
+  - Other_Body         # 11
