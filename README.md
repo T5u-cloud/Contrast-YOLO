@@ -28,7 +28,7 @@ network to learn stable type-discriminative features.
 存在挑战：塔身本身在俯视图下纹理相似，**塔身投下的阴影才编码了关键的形态线索**。
 而常规的单框标注把"塔身"和"阴影"揉进同一个 bounding box，
 让网络难以学到稳定的塔型判别特征。
-
+<img width="4143" height="2270" alt="网络流程图" src="https://github.com/user-attachments/assets/79271bff-945b-4162-b684-4feb1bf14cc8" />
 This project proposes:
 本项目提出：
 
@@ -172,7 +172,6 @@ Evaluated on a self-collected dataset of **1,935 remote-sensing images**
                                                │  └──────────────────────┘  │
                                                └────────────────────────────┘
 ```
-<img width="4143" height="2270" alt="网络流程图" src="https://github.com/user-attachments/assets/79271bff-945b-4162-b684-4feb1bf14cc8" />
 
 **Total loss / 总损失:**
 
