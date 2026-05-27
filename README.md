@@ -174,6 +174,7 @@ Evaluated on a self-collected dataset of **1,935 remote-sensing images**
 ```
 
 **Total loss / 总损失:**
+![Uploading 网络流程图.png…]()
 
 ```
 L_total = L_yolo  +  λ_body · L_body  +  λ_diff · L_diff  +  λ_pair · L_pair
